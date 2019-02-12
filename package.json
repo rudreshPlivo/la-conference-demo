@@ -1,0 +1,23 @@
+{
+  "name": "la-conference",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/dev",
+    "clear": "rm -rf public",
+    "build": "npm run clear && mkdir public && babel src -s -d public --copy-files",
+    "production": "npm run build && node bin/production",
+    "heroku": "node public/app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0"
+  }
+}
