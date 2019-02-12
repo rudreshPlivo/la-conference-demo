@@ -37,7 +37,7 @@ router.post("/", function (req, res, next) {
     var altNumber = volunteerNumbers[1]; //for user number because same number can't be both toNumber and fromNumber
 
     //having a unique answer_url per group makes it trivial to ensure members of the group join same conference room
-    var answerUrl = "http://la-conference-demo.herokuapp.com/" + confRoomName;
+    var answerUrl = "http://la-conference-demo.herokuapp.com/confanswerurl/" + confRoomName;
 
     volunteerNumbers.forEach(function (number) {
       //trigger a call to each number in the array

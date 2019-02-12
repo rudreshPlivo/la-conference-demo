@@ -32,7 +32,7 @@ router.post("/:roomname", function (req, res, next) {
   //now the conference parameters
 
   //conference callback url will also have the same parameterised url to make it easier to store join and leave events
-  var confCallbackUrl = "https://la-conference-demo.herokuapp.com/" + confRoomName;
+  var confCallbackUrl = "https://la-conference-demo.herokuapp.com/confcallbackurl/" + confRoomName;
   var confParams = {
     callbackUrl: confCallbackUrl,
     callbackMethod: "POST"
