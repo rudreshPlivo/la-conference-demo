@@ -30,9 +30,9 @@ router.post("/", function (req, res, next) {
     var client = new plivo.Client(_env2.default.AUTH_ID, _env2.default.AUTH_TOKEN);
 
     //numbers array -- these numbers can also be sent in the post request body
-    var volunteerNumbers = ["919825069909", "919825082101"];
+    var volunteerNumbers = ["*********", "************"];
     //decide the room name of the conference and make it a parameter in answer url
-    var confRoomName = "919825069909";
+    var confRoomName = "***********"; //this can be users number
     var userNumber = volunteerNumbers[0]; //first number in the array to be used as caller id
     var altNumber = volunteerNumbers[1]; //for user number because same number can't be both toNumber and fromNumber
 

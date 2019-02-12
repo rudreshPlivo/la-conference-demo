@@ -1,0 +1,23 @@
+This project implements a simple broadcast conference. Here's what you can do to start
+
+Step 1: Clone the repo
+
+Step 2: Change src/config/env.js file to include your plivo auth id and auth token
+
+Step 3: In src/routes/startconference.js change volunteerNumbers array to include Test numbers.
+
+Step 4: Change the hardcoded answerurl in src/routes/startconference.js to your weburl
+
+Step 5: Change the hardcoded conferencecallback url in src/routes/confanswerurl.js to your url
+
+Step 6 A: To use the app - dev environment
+
+        6.A.1 npm run start
+
+Step 6 B: To use the app - prod environment
+
+        6.B.1 npm run production
+
+Procfile included if you want to deploy on heroku - change the urls mentioned in step 4 and step 5.
+Run num run build before pushing to heroku branch.
+
