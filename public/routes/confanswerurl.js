@@ -29,6 +29,8 @@ router.post("/:roomname", function (req, res, next) {
   console.log("this is the information received for inbound request");
   console.log(req.body);
 
+  var isLeader = roomname == req.body.To;
+
   //now prepare the XML --------
 
   //first speak text that will be played when members join conference
@@ -40,7 +42,10 @@ router.post("/:roomname", function (req, res, next) {
   var confCallbackUrl = "https://la-conference-demo.herokuapp.com/confcallbackurl/" + confRoomName;
   var confParams = {
     callbackUrl: confCallbackUrl,
-    callbackMethod: "POST"
+    callbackMethod: "POST",
+    StartConferenceOnEnter: isLeader,
+    EndConferenceOnExit: isLeader,
+    muted: !isLeader
   };
 
   //now create response xml using plivo sdk's xml generator
