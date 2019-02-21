@@ -30,8 +30,8 @@ router.post("/:roomname", (req, res, next) => {
   var confParams = {
     callbackUrl: confCallbackUrl,
     callbackMethod: "POST",
-    StartConferenceOnEnter: isLeader ? "true" : "false",
-    EndConferenceOnExit: isLeader ? "true" : "false",
+    startConferenceOnEnter: isLeader ? "true" : "false",
+    endConferenceOnExit: isLeader ? "true" : "false",
     muted: isLeader ? "false" : "true"
   };
 
