@@ -30,11 +30,13 @@ router.post("/:roomname", (req, res, next) => {
   var confParams = {
     callbackUrl: confCallbackUrl,
     callbackMethod: "POST",
-    StartConferenceOnEnter: isLeader,
-    EndConferenceOnExit: isLeader,
-    muted: !isLeader
+    StartConferenceOnEnter: isLeader ? "true" : "false",
+    EndConferenceOnExit: isLeader ? "true" : "false",
+    muted: isLeader ? "false" : "true"
   };
 
+  console.log(`conference parameters`);
+  console.log(confParams);
   //now create response xml using plivo sdk's xml generator
   var response = plivo.Response();
 
