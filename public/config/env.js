@@ -5,8 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 var env = {
   PORT: process.env.PORT || 8080,
-  AUTH_ID: "MAYTC2NDEXMTHJYJGZNW", //plivo auth id --see on plivo.com
-  AUTH_TOKEN: "ZmE4NjhlNzdjZGRjZDhlNWUxYjMyYjY4NDBiYzhj" //plivo auth token -- see on plivo.com
+  AUTH_ID: "PLIVO_AUTH_ID", //plivo auth id --see on plivo.com
+  AUTH_TOKEN: "PLIVO_AUTH_TOKEN" //plivo auth token -- see on plivo.com
 };
 
 exports.default = env;
