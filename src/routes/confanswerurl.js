@@ -16,6 +16,8 @@ router.post("/:roomname", (req, res, next) => {
 
   var isLeader = roomname == req.body.To;
 
+  console.log(`leader is ${isLeader}`);
+
   //now prepare the XML --------
 
   //first speak text that will be played when members join conference
