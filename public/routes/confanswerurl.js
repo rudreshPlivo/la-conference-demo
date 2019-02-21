@@ -29,7 +29,7 @@ router.post("/:roomname", function (req, res, next) {
   console.log("this is the information received for inbound request");
   console.log(req.body);
 
-  var isLeader = roomname == req.body.To;
+  var isLeader = req.params.roomname == req.body.To;
 
   console.log("leader is " + isLeader);
 
