@@ -24,6 +24,11 @@ router.post("/:roomname", function (req, res, next) {
   var confRoomName = req.params.roomname;
   console.log("this conference room name will be " + confRoomName);
 
+  //understand if this request is for the moderator/leader because then we will respond with additional conference parameters
+
+  console.log("this is the information received for inbound request");
+  console.log(req.body);
+
   //now prepare the XML --------
 
   //first speak text that will be played when members join conference
